@@ -1,10 +1,10 @@
 import React from 'react';
 
 // Components
-import PostDetail from './PostDetail.jsx';
-import CommentItems from '../comments/CommentItems.jsx';
+import PostBody from './posts/PostBody.jsx';
+import CommentItems from './comments/CommentItem.jsx';
 
-export default class PostItems extends React.Component {
+export default class PostItem extends React.Component {
 
   onClickMenuPost() {
     $('.menu-post').toggleClass('menu-post-active');
@@ -18,7 +18,7 @@ export default class PostItems extends React.Component {
         <div className="post-item">
           <div className="post row">
             <div className="col l8">
-              <PostDetail />
+              <PostBody postType={this.props.postType} />
             </div>
             <div className="col l4">
               <CommentItems />
