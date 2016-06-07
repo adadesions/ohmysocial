@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Components
-import CommentDetail from './CommentBody.jsx'
+import CommentBody from './CommentBody.jsx'
 
 export default class CommentItem extends React.Component {
   render() {
@@ -15,8 +15,8 @@ export default class CommentItem extends React.Component {
             </div>
         </div>
         <div className="comment-item">
-          <CommentDetail />
-          <CommentDetail />
+          <CommentBody />
+          <CommentBody />
         </div>
       </div>
     )
