@@ -26,7 +26,7 @@ export default class PostItem extends React.Component {
           </div>
         </div>
         <div onClick={this.onClickMenuPost} className="menu-post">
-
+          <img src="/images/posts/icon/slide-btn.png"/>
         </div>
         <div className="menu-list">
           <img src="/images/posts/icon/send.png"/>
