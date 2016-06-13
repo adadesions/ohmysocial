@@ -17,10 +17,10 @@ export default class PostItem extends React.Component {
         <img className="responsive-img circle avatar" src="/images/posts/avatar.jpg"/>
         <div className="post-item">
           <div className="post row">
-            <div className="col l8">
+            <div className="col l8 s12">
               <PostBody postType={this.props.postType} />
             </div>
-            <div className="col l4">
+            <div className="col l4 s12">
               <CommentItems />
             </div>
           </div>

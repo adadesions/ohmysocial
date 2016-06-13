@@ -69,10 +69,10 @@ export default class PostBody extends React.Component {
         { this.getRenderPostByType(this.props.postType) }
 
         <div className="row social-bar">
-          <div className="col l8 title-post">
+          <div className="col l8 s8 title-post">
             <h5>AdaCode International Space Station</h5>
           </div>
-          <div className="col l4 function-post">
+          <div className="col l4 s4 function-post">
             <div className="function-favorite">
               <img src="/images/posts/icon/favorite.png"/>
               <span>Favorite</span>

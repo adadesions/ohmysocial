@@ -20,34 +20,31 @@ export default class Landing extends React.Component {
   render() {
     return(
       <div className="landing-page row">
-        <div className="col l6 left">
+        <div className="col l6 s12 left">
           <div className="content-left">
-            <img className="materialboxed" src="/images/landing/news1.jpg"/>
+            <img src="/images/landing/news1.jpg"/>
           </div>
         </div>
-        <div className="col l6 right">
+        <div className="col l6 s12 right">
           <h4>Sign Up</h4>
           <div className="form-signup">
-            <div className="input-field col l6">
+            <div className="input-field col l6 s12">
               <input placeholder="First name" id="firstname" type="text" className="validate"/>
             </div>
-            <div className="input-field col l6">
+            <div className="input-field col l6 s12">
               <input placeholder="Password" id="surname" type="text" className="validate"/>
             </div>
-            <div className="input-field col l12">
+            <div className="input-field col l12 s12">
               <input placeholder="Email" id="email" type="email" className="validate"/>
             </div>
-            <div className="input-field col l12">
-              <input placeholder="Re-Email" id="reemail" type="email" className="validate"/>
-            </div>
-            <div className="input-field col l12">
+            <div className="input-field col l12 s12">
               <input placeholder="Password" id="password-signup" type="password" className="validate"/>
             </div>
-            <div className="input-field col l12">
+            <div className="input-field col l12 s12">
               <input type="date" id="birthday" className="datepicker"/>
               <label for="birthday">birthday</label>
             </div>
-            <div className="input-field col l12 gender-select">
+            <div className="input-field col l12 s12 gender-select">
               <select defaultValue="0">
                 <option value="0" disabled>Choose your option</option>
                 <option value="1">male</option>
@@ -55,7 +52,7 @@ export default class Landing extends React.Component {
               </select>
               <label>Gender</label>
             </div>
-            <div className="input-field col l12 btn-signup">
+            <div className="input-field col l12 s12 btn-signup">
               <a className="waves-effect waves-light btn green">Let's Rock !!</a>
             </div>
           </div>

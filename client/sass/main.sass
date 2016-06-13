@@ -113,6 +113,7 @@ html
       height: 40rem
       border-radius: 4px
       padding: 2rem
+      margin-top: 2rem
     h4
       color: #fff
     input
@@ -338,5 +339,235 @@ $breakpoint-desktop: 1680px
       height: 3rem
       transition: height 0.5s
 
-// /////mobile large/////
-// @media only screen and (min-device-width: 351px) and (max-device-width: $breakpoint-mobile-large)
+/////mobile large/////
+@media only screen and (min-device-width:351px)and(max-device-width:$breakpoint-mobile-large)
+  // Navigator
+  .navigator-landing
+    .menu
+      width: 60%
+    input
+      width: 90%
+      height: 2em
+      font-size: 25px
+    label
+      font-size: 25px
+  // Landing page
+  .landing-page
+    display: flex
+    flex-flow: column-reverse
+    .right
+      padding-top: 5rem
+      h4
+        font-size: 65px
+        margin-bottom: 2rem
+      .form-signup
+        background: rgba(255,255,255,0.2)
+        height: 66rem !important
+        padding-bottom: 2rem
+        margin-top: 5rem
+        z-index: 1
+        a
+          width: 100%
+          height: 4rem
+          font-size: 30px
+          line-height: 4rem
+        input
+          height: 2.5em
+          font-size: 35px
+          color: #D1D1D1
+        label
+          font-size: 35px
+        .select-wrapper
+          margin-top: 3rem
+          span
+            font-size: 2rem
+            line-height: 5rem
+          li.disabled
+            span
+              color: #D1D1D1
+        .picker__box
+          height: 75rem
+          width: 45rem
+          margin-left: -55%
+          font-size: 50px
+          .picker__weekday-display
+            font-size: 50px
+          .picker__month-display
+            font-size: 50px
+          .picker__day-display
+            font-size: 50px
+          .picker__year-display
+            font-size: 50px
+          th
+            font-size: 40px
+          .picker__day
+            font-size: 40px
+          .btn-flat
+            font-size: 40px
+          .picker__calendar-container
+            margin-top: 2rem
+          .picker__footer
+            margin-top: 7rem
+    .left
+      img
+        height: 100% !important
+        position: fixed
+        top: 6.2rem
+        opacity: 0.4
+        z-index: -1
+  // Navigator
+  .navigator
+    background-color: #1B2E3C
+    height: 10rem
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
+    position: relative
+    padding-left: 2rem
+    padding-right: 2rem
+    display: flex
+    justify-content: space-between
+    transition: height 0.8s
+    img
+      height: 10rem
+      cursor: pointer
+      transition: height 0.8s
+    .menu
+      width: 50%
+      display: flex
+      align-items: center
+      .list
+        width: 100%
+        display: flex
+        justify-content: space-around
+        flex-flow: row
+        img
+          height: 7rem
+          cursor: pointer
+          transition: height 0.8s
+  .navigator-on-scroll
+    position: fixed
+    top: 0
+    width: 100%
+    background-color: #1B2E3C
+    height: 10rem
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
+    z-index: 999
+    img
+      height: 10rem
+      cursor: pointer
+    .menu
+      width: 50%
+      display: flex
+      align-items: center
+      .list
+        width: 100%
+        display: flex
+        justify-content: space-around
+        flex-flow: row
+        img
+          height: 7rem
+          cursor: pointer
+  // Feed
+  .menu-post
+    background-color: #fff
+    width: 4rem
+    height: 3rem
+    margin-top: -6rem
+    margin-bottom: 3rem
+    margin-left: 58rem
+    transition: width 0.5s
+    border-top-right-radius: 1.5rem
+    border-bottom-right-radius: 1.5rem
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+    cursor: pointer
+    img
+      width: 1.3rem
+      margin-left: 1.7rem
+      margin-top: 0.33rem
+      transition: margin-left 0.5s
+  .menu-post-active
+    width: 7rem
+    img
+      width: 1rem
+      margin-top: 0.6rem
+      margin-left: 5.3rem
+
+  .menu-list
+    background-color: #fff
+    width: 0rem
+    height: 17rem
+    margin-top: -22rem
+    margin-bottom: 6rem
+    margin-left: 58rem
+    transition: width 0.5s
+    border-top-right-radius: 1.5rem
+    img
+      height: 0rem
+      margin-left: -3rem
+      margin-top: 1rem
+      transition: margin-left 0.5s
+      transition: height 0s
+      cursor: pointer
+  .menu-list-active
+    width: 5.5rem
+    img
+      margin-left: 1.5rem
+      height: 3rem
+      transition: height 0.5s
+  .title-post
+    h5
+      line-height: 2.8rem
+  .function-share
+    display: flex
+    justify-content: space-around
+    width: 31% !important
+    img
+      width: auto
+      height: 2.5rem !important
+      cursor: pointer
+    span
+      font-size: 20px
+      line-height: 2.5rem !important
+      cursor: pointer
+  .function-favorite
+    display: flex
+    justify-content: space-around
+    width: 31% !important
+    img
+      width: auto
+      height: 2rem !important
+      cursor: pointer
+      margin-right: 0.4rem
+    span
+      font-size: 20px
+      line-height: 2rem !important
+      cursor: pointer
+  // Comment
+  .comment-layout
+    img.avatar-comment
+      width: auto
+      height: 5.5rem
+      cursor: pointer
+      z-index: 1
+    .write-post
+      display: flex
+    .input-field
+      width: 80% !important
+      margin-top: 1rem
+      margin-left: 0.5rem !important
+      input
+        height: 2em
+        font-size: 25px
+      label
+        font-size: 25px
+        padding-left: 4rem
+        text-align: center
+  .comment-item
+    margin-top: 0.5rem
+  .comment-detail
+    img.avatar-comment-detail
+      height: 4rem
+      width: auto
+  .post-item
+    .post
+      padding-top: 2rem
+      padding-bottom: 5rem
