@@ -16,7 +16,6 @@ export default class CommentItem extends React.Component {
         </div>
         <div className="comment-item">
           <CommentBody />
-          <CommentBody />
         </div>
       </div>
     )
