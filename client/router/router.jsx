@@ -9,6 +9,8 @@ import LandingContainer from '../../import/layouts/LandingContainer.jsx';
 // Components
 import Feed from '../../import/pages/Feed.jsx';
 import Landing from '../../import/pages/Landing.jsx';
+import Search from '../../import/pages/Search.jsx';
+import Profile from '../../import/pages/Profile.jsx';
 
 const landingRouter = FlowRouter.group({
   name: 'landing',
@@ -32,6 +34,24 @@ mainRouter.route('/feed', {
   action() {
     mount(Container, {
       content: <Feed />,
+    });
+  },
+});
+
+mainRouter.route('/search', {
+  name: 'search',
+  action() {
+    mount(Container, {
+      content: <Search />,
+    });
+  },
+});
+
+mainRouter.route('/profile', {
+  name: 'profile',
+  action() {
+    mount(Container, {
+      content: <Profile />,
     });
   },
 });

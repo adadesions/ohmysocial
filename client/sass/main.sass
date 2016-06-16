@@ -55,9 +55,12 @@ html
     cursor: pointer
     transition: height 0.8s
   .menu
-    width: 30%
+    width: 55%
     display: flex
-    align-items: center
+    align-items: flex-end
+    input
+      color: #fff
+      font-size: 25px
     .list
       width: 100%
       display: flex
@@ -579,3 +582,37 @@ $breakpoint-desktop: 1680px
     margin-left: 2rem
   .post-detail
     padding: 1rem
+
+// Search page
+.collapsible-header
+  border-radius: 2px
+  margin-bottom: 0.5rem
+.collapsible-body
+  background: #fff
+  border-radius: 4px
+
+// Profile
+.img-profile
+  display: flex
+  justify-content: flex-end
+  padding-right: 2rem
+  img
+    margin-top: -6rem
+    border: 5px solid #323232
+.cover-profile
+  height: 22rem
+  background: url('/images/profile/cover.png')
+  padding-top: 1rem
+  padding-left: 2rem
+  padding-right: 30rem
+.profile-detail
+  padding-left: 1rem
+  color: #fff
+  span
+    font-size: 20px
+  .history
+    border: 3px solid #323232
+    border-radius: 1rem
+    padding: 0.5rem
+  i
+    margin-right: 0.5rem
