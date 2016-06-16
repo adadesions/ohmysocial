@@ -592,27 +592,72 @@ $breakpoint-desktop: 1680px
   border-radius: 4px
 
 // Profile
-.img-profile
-  display: flex
-  justify-content: flex-end
-  padding-right: 2rem
-  img
+.profile
+  .img-profile
+    display: flex
+    justify-content: flex-end
+    padding-right: 2rem
+    img
+      margin-top: -6rem
+      border: 5px solid #323232
+  .cover-profile
+    height: 22rem
+    background: url('/images/profile/cover.png')
+    padding-top: 1rem
+    padding-left: 2rem
+    padding-right: 30rem
+  .profile-detail
+    padding-left: 1rem
+    color: #fff
+    span
+      font-size: 20px
+    .history
+      padding: 0.5rem
+    i
+      margin-right: 0.5rem
+  .menu-post
+    background-color: #fff
+    width: 4.5rem
+    height: 3rem
     margin-top: -6rem
-    border: 5px solid #323232
-.cover-profile
-  height: 22rem
-  background: url('/images/profile/cover.png')
-  padding-top: 1rem
-  padding-left: 2rem
-  padding-right: 30rem
-.profile-detail
-  padding-left: 1rem
-  color: #fff
-  span
-    font-size: 20px
-  .history
-    border: 3px solid #323232
-    border-radius: 1rem
-    padding: 0.5rem
-  i
-    margin-right: 0.5rem
+    margin-bottom: 3rem
+    margin-left: 72rem
+    transition: width 0.5s
+    border-top-right-radius: 1.5rem
+    border-bottom-right-radius: 1.5rem
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+    cursor: pointer
+    img
+      width: 1.3rem
+      margin-left: 2.5rem
+      margin-top: 0.33rem
+      transition: margin-left 0.5s
+  .menu-post-active
+    width: 7rem
+    img
+      width: 1rem
+      margin-top: 0.6rem
+      margin-left: 5.3rem
+
+  .menu-list
+    background-color: #fff
+    width: 0rem
+    height: 17rem
+    margin-top: -22rem
+    margin-bottom: 6rem
+    margin-left: 72rem
+    transition: width 0.5s
+    border-top-right-radius: 1.5rem
+    img
+      height: 0rem
+      margin-left: -3rem
+      margin-top: 1rem
+      transition: margin-left 0.5s
+      transition: height 0s
+      cursor: pointer
+  .menu-list-active
+    width: 6rem
+    img
+      margin-left: 2.5rem
+      height: 3rem
+      transition: height 0.5s
