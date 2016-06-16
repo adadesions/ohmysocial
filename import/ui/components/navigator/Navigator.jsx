@@ -25,7 +25,7 @@ export default class Navigator extends React.Component {
         <div className="menu">
           <div className="list">
             <div className="input-field">
-              <input id="last_name" type="text" className="validate"/>
+              <input id="last_name" type="text"/>
             </div>
             <img src="/images/posts/icon/find.png"/>
             <img src="/images/posts/icon/discov.png"/>

@@ -24,7 +24,7 @@ export default class Profile extends React.Component {
             <img className="circle z-depth-1" src="/images/posts/avatar.jpg"/>
           </div>
         </div>
-        <PostItem />
+        <PostItem postType="image"/>
       </div>
     )
   }
