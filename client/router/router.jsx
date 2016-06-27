@@ -38,6 +38,7 @@ mainRouter.route('/feed', {
   },
 });
 
+
 mainRouter.route('/search', {
   name: 'search',
   action() {
