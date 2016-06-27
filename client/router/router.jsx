@@ -21,7 +21,7 @@ const mainRouter = FlowRouter.group({
 });
 
 landingRouter.route('/', {
-  name: 'adasocial',
+  name: 'root',
   action() {
     mount(LandingContainer, {
       content: <Landing />,
