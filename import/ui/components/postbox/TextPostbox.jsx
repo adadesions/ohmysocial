@@ -8,21 +8,6 @@ export default class TextPostbox extends React.Component {
 
   }
 
-  onClickPublish() {
-    let postContent = this.refs.postContent.value;
-    const userId = Meteor.userId();
-    const postType = 'text';
-    const publishedAt = new Date();
-    const postObj = {
-      userId,
-      postType,
-      postContent,
-      publishedAt,
-    }
-    Meteor.call('savePost', postObj, () => {
-      this.refs.postContent.value  = '';
-    });
-  }
 
   render() {
     return(
@@ -34,7 +19,6 @@ export default class TextPostbox extends React.Component {
         <div className="btn-post-box col l12">
           <a
             className="waves-effect waves-light btn"
-            onClick={ () => this.onClickPublish() }
           >Publish</a>
         </div>
       </div>
