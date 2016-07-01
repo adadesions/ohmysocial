@@ -2,9 +2,9 @@
 <br />
 <h1>The First workshop of AdaCode.io</h1>
 <ui>
-  <li>- New Metheology</li>
-  <li>- New Style</li>
-  <li>- New Intructors</li>
+  <li>New Metheology</li>
+  <li>New Styles</li>
+  <li>New Instructors</li>
 </ui>
 
 #Welcome everyone to the fucking Hip Workshop!
