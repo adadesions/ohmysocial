@@ -1,6 +1,9 @@
 import React from 'react';
 
-export default class Navigator extends React.Component {
+// Components
+import SignIn from '../SignIn.jsx';
+
+export default class NavigatorLanding extends React.Component {
 
   componentDidMount() {
     $(document).scroll(function(){
@@ -18,21 +21,11 @@ export default class Navigator extends React.Component {
 
   render() {
     return(
-      <div className="navigator">
+      <div className="navigator-landing">
         <div className="logo">
           <img src="/images/posts/icon/logo.png"/>
         </div>
-        <div className="menu">
-          <div className="list">
-            <div className="input-field">
-              <input id="last_name" type="text"/>
-            </div>
-            <img src="/images/posts/icon/find.png"/>
-            <img src="/images/posts/icon/discov.png"/>
-            <img src="/images/posts/icon/noti.png"/>
-            <img src="/images/posts/icon/profile.png"/>
-          </div>
-        </div>
+        <SignIn />
       </div>
     )
   }

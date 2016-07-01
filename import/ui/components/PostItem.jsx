@@ -1,10 +1,10 @@
 import React from 'react';
 
 // Components
-import PostDetail from './PostDetail.jsx';
-import CommentItems from '../comments/CommentItems.jsx';
+import PostBody from './posts/PostBody.jsx';
+import CommentItems from './comments/CommentItem.jsx';
 
-export default class PostItems extends React.Component {
+export default class PostItem extends React.Component {
 
   onClickMenuPost() {
     $('.menu-post').toggleClass('menu-post-active');
@@ -17,16 +17,16 @@ export default class PostItems extends React.Component {
         <img className="responsive-img circle avatar" src="/images/posts/avatar.jpg"/>
         <div className="post-item">
           <div className="post row">
-            <div className="col l8">
-              <PostDetail />
+            <div className="col l8 s12">
+              <PostBody postType={this.props.postType} />
             </div>
-            <div className="col l4">
+            <div className="col l4 s12">
               <CommentItems />
             </div>
           </div>
         </div>
         <div onClick={this.onClickMenuPost} className="menu-post">
-
+          <img src="/images/posts/icon/slide-btn.png"/>
         </div>
         <div className="menu-list">
           <img src="/images/posts/icon/send.png"/>
