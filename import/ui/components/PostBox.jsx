@@ -12,11 +12,6 @@ export default class PostBox extends React.Component {
     this.state = {
       type: "",
     }
-    this.onClickImage = this.onClickImage.bind(this);
-    this.onClickEmbed = this.onClickEmbed.bind(this);
-    this.onClickQuote = this.onClickQuote.bind(this);
-    this.onClickText = this.onClickText.bind(this);
-    this.renderBox = this.renderBox.bind(this);
   }
 
   componentDidMount() {
@@ -24,62 +19,45 @@ export default class PostBox extends React.Component {
       $('ul.tabs').tabs();
     });
 
-    if(this.state.type == "text"){
-      $('.menu-text').addClass('active')
-    }
-    else if (this.state.type == "embed") {
-      $('.menu-embed').addClass('active')
-    }
-    else if (this.state.type == "quote") {
-      $('.menu-quote').addClass('active')
-    }
-    else {
-      $('.menu-img').addClass('active')
+    const type = this.state.type;
+    switch (type) {
+      case 'text':
+        $('.menu-text').addClass('active')
+        break;
+      case 'embed':
+        $('.menu-embed').addClass('active')
+        break;
+      case 'quote':
+        $('.menu-quote').addClass('active')
+        break;
+      case 'img':
+        $('.menu-img').addClass('active')
+        break;
+      default:
+        $('.menu-text').addClass('active')
     }
   }
 
-  onClickImage() {
-    const type = "img";
+  onClickPostTypes(inputType) {
+    const type = inputType;
     this.setState({
-      type: type,
-    })
-  }
-
-  onClickEmbed() {
-    const type = "embed";
-    this.setState({
-      type: type,
-    })
-  }
-
-  onClickQuote() {
-    const type = "quote";
-    this.setState({
-      type: type,
-    })
-  }
-
-  onClickText() {
-    const type = "text";
-    this.setState({
-      type: type,
+      type,
     })
   }
 
   renderBox() {
-    if(this.state.type == "text"){
-      return <TextPostbox />
+    const postType = this.state.type;
+    switch( postType ) {
+      case 'text': return <TextPostbox />
+        break;
+      case 'embed': return <EmbedPostbox />
+        break;
+      case 'quote': return <QuotePostbox />
+        break;
+      case 'img': return <ImagePostbox />
+        break;
+      default: return <TextPostbox />
     }
-    else if (this.state.type == "embed") {
-      return <EmbedPostbox />
-    }
-    else if (this.state.type == "quote") {
-      return <QuotePostbox />
-    }
-    else {
-      return <ImagePostbox />
-    }
-
   }
 
   render() {
@@ -91,10 +69,10 @@ export default class PostBox extends React.Component {
           </div>
           <div className="col s12">
             <ul className="tabs">
-              <li className="tab col s3"><a onClick={this.onClickImage} className="menu-img active" href="">image</a></li>
-              <li className="tab col s3"><a onClick={this.onClickEmbed} className="menu-embed" href="">embed</a></li>
-              <li className="tab col s3"><a onClick={this.onClickText} className="menu-text" href="">text</a></li>
-              <li className="tab col s3"><a onClick={this.onClickQuote} className="menu-quote" href="">quote</a></li>
+              <li className="tab col s3"><a onClick={() => this.onClickPostTypes('text')} className="menu-text active" href="">text</a></li>
+              <li className="tab col s3"><a onClick={() => this.onClickPostTypes('img')} className="menu-img" href="">image</a></li>
+              <li className="tab col s3"><a onClick={() => this.onClickPostTypes('embed')} className="menu-embed" href="">embed</a></li>
+              <li className="tab col s3"><a onClick={() => this.onClickPostTypes('quote')} className="menu-quote" href="">quote</a></li>
             </ul>
           </div>
         </div>
