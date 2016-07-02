@@ -10,28 +10,23 @@ export default class SignUp extends React.Component{
 
   onclickSignUp() {
     const firstName = this.refs.firstName.value;
-    const lastName = this.refs.lastName.value;
-    const email = this.refs.email.value;
-    const password = this.refs.password.value;
-    const birthday = this.refs.birthday.value;
-    const gender = this.refs.gender.value;
-    // User end point object
-    const profile = {
+    const lastName  = this.refs.lastName.value;
+    const email     = this.refs.email.value;
+    const password  = this.refs.password.value;
+    const birthday  = this.refs.birthday.value;
+    const gender    = this.refs.gender.value;
+
+    const userObj = {
       firstName,
       lastName,
+      email,
+      password,
       birthday,
       gender
     }
-    const userObj = {
-      username: email,
-      password,
-      email,
-      profile,
-    }
-    // Create New Accounts
-    Accounts.createUser(userObj, () => {
-      FlowRouter.go('feed');
-    });
+
+    console.log(userObj);
+
   }
 
   render() {
