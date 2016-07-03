@@ -53,17 +53,19 @@ export default class PostBody extends React.Component {
   getRenderPostByType(type){
     const post = this.props.post;
     switch(type) {
-      case 'embed': return this.postEmbed("//www.youtube.com/embed/Q8TXgCzxEnw?rel=0");
+      case 'embed': return this.postEmbed(`${post.linkUrl}`);
             break;
       case 'image': return this.postImage("/images/posts/test.jpg");
             break;
       case 'text': return this.postText(post.postContent);
             break;
-      case 'quote': return this.postQuote("\"We're AdaCode, Living our life!\"");
+      case 'quote': return this.postQuote(`"${post.postContent}"`);
     }
   }
 
   render() {
+    const post = this.props.post;
+    const title = post.title || '';
     return(
       <div className="post-detail">
 
@@ -71,7 +73,7 @@ export default class PostBody extends React.Component {
 
         <div className="row social-bar">
           <div className="col l8 s7 title-post">
-            {/*<h5>AdaCode International Space Station</h5>*/}
+            <h5>{ title }</h5>
           </div>
           <div className="col l4 s5 function-post">
             <div className="function-favorite">

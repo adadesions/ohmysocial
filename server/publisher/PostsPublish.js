@@ -4,5 +4,5 @@ import { Meteor } from 'meteor/meteor';
 import Posts from '../../import/apis/collections/Posts.js';
 
 Meteor.publish('newsfeedPost', () => {
-  return Posts.find({}, { sort: { 'publishedAt': -1 } });
+  return Posts.find();
 });

@@ -36,7 +36,7 @@ export default createContainer(() => {
   const isDBReady = Meteor.subscribe('newsfeedPost').ready();
   let postsSet = [];
   if( isDBReady ) {
-    postsSet = Posts.find().fetch();    
+    postsSet = Posts.find({}, { sort: { 'publishedAt': -1 } }).fetch();    
   }
   return {
     postsSet,
