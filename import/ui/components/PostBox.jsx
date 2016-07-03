@@ -65,7 +65,7 @@ export default class PostBox extends React.Component {
       <div className="post-box">
         <div className="row post-box-body">
           <div className="col l12">
-            {this.renderBox()}
+            { this.renderBox() }
           </div>
           <div className="col s12">
             <ul className="tabs">
