@@ -33,7 +33,11 @@ class Feed extends React.Component {
 }
 
 export default createContainer(() => {
-  const postsSet = Posts.find().fetch();
+  const isDBReady = Meteor.subscribe('newsfeedPost').ready();
+  let postsSet = [];
+  if( isDBReady ) {
+    postsSet = Posts.find().fetch();    
+  }
   return {
     postsSet,
   }
