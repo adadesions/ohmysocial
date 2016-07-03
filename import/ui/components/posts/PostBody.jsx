@@ -53,7 +53,7 @@ export default class PostBody extends React.Component {
   getRenderPostByType(type){
     const post = this.props.post;
     switch(type) {
-      case 'embed': return this.postEmbed(`${post.linkUrl}`);
+      case 'embed': return this.postEmbed(`//${post.linkUrl}`);
             break;
       case 'image': return this.postImage("/images/posts/test.jpg");
             break;
