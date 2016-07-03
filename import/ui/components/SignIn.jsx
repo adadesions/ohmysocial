@@ -20,7 +20,8 @@ export default class SignIn extends React.Component {
     const username = this.refs.username.value;
     const password = this.refs.password.value;
     const redirectToFeed = () => {
-      if( Meteor.userId() ){
+      console.log(Meteor.loggingIn());
+      if( Meteor.loggingIn() ){
         FlowRouter.go('feed');
       }
       else {
@@ -28,7 +29,9 @@ export default class SignIn extends React.Component {
       }
     };
     // Login with Password
-    Meteor.loginWithPassword(username, password, redirectToFeed());
+    Meteor.loginWithPassword(username, password);
+    
+    redirectToFeed();
   }
 
   render() {

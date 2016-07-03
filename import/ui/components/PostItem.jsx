@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 // Components
 import PostBody from './posts/PostBody.jsx';
@@ -18,7 +18,7 @@ export default class PostItem extends React.Component {
         <div className="post-item">
           <div className="post row">
             <div className="col l8 s12">
-              <PostBody postType={this.props.postType} />
+              <PostBody post={this.props.postObj} />
             </div>
             <div className="col l4 s12">
               <CommentItems />
@@ -37,4 +37,8 @@ export default class PostItem extends React.Component {
       </div>
     )
   }
+}
+
+PostItem.propTypes = {
+  postObj: PropTypes.object.isRequired,
 }

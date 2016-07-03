@@ -5,22 +5,28 @@ import { Meteor } from 'meteor/meteor';
 export default class TextPostbox extends React.Component {
   constructor(props) {
     super(props);
-
+    this.onClickPostPublish = this.onClickPostPublish.bind(this);
   }
 
-  onClickPublish() {
-    let postContent = this.refs.postContent.value;
+  onClickPostPublish() {
+    const postContent = this.refs.postContent.value;
     const userId = Meteor.userId();
-    const postType = 'text';
     const publishedAt = new Date();
+    const postType = 'text';
+
     const postObj = {
       userId,
-      postType,
       postContent,
-      publishedAt,
+      postType,
+      publishedAt
     }
-    Meteor.call('savePost', postObj, () => {
-      this.refs.postContent.value  = '';
+    Meteor.call('saveToDB',postObj, (err) => {
+      if(err) {
+        console.log(`ERROR on saveToDB : ${err}`);
+      }
+      else {
+        console.log('Saved to DB');
+      }
     });
   }
 
@@ -33,8 +39,8 @@ export default class TextPostbox extends React.Component {
         </div>
         <div className="btn-post-box col l12">
           <a
+            onClick={ this.onClickPostPublish }
             className="waves-effect waves-light btn"
-            onClick={ () => this.onClickPublish() }
           >Publish</a>
         </div>
       </div>

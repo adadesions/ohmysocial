@@ -1,10 +1,11 @@
+// Core
 import { Meteor } from 'meteor/meteor';
 
 // Collections
-import Posts from '../../import/apis/collections/posts.js';
+import Posts from '../../import/apis/collections/Posts.js';
 
 Meteor.methods({
-  savePost( postObj ) {
+  saveToDB(postObj) {
     Posts.insert(postObj);
-  },
+  }
 })
